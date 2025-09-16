@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1ZGWR57M8VQhvcHGa0LYjAl6uhlhyQdESFEJmyR5pUU=",
+  "Source": "event-mgt-server",
+  "BasePath": "_content/event-mgt-server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
