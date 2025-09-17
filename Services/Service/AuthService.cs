@@ -23,7 +23,7 @@ namespace event_mgt_server.Services.Service
 
         public async Task<string> RegisterAsync(RegisterModel model)
         {
-            if (_context.Users.Any(u => u.UserName == model.Username))
+            if (_context.users.Any(u => u.UserName == model.Username))
                 return "Username already exists.";
 
             var user = new User
@@ -34,7 +34,7 @@ namespace event_mgt_server.Services.Service
                 Password = BCrypt.Net.BCrypt.HashPassword(model.Password)
             };
 
-            _context.Users.Add(user);
+            _context.users.Add(user);
             await _context.SaveChangesAsync();
 
             return "Registration successful.";
@@ -42,7 +42,7 @@ namespace event_mgt_server.Services.Service
 
         public async Task<object> LoginAsync(LoginDTO model)
         {
-            var user = _context.Users.FirstOrDefault(x => x.UserName == model.Username);
+            var user = _context.users.FirstOrDefault(x => x.UserName == model.Username);
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
                 return "Invalid credentials";
 
@@ -81,7 +81,7 @@ namespace event_mgt_server.Services.Service
         }
         public async Task<object> RefreshTokenAsync(TokenDTO tokenModel)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.RefreshToken == tokenModel.RefreshToken);
+            var user = await _context.users.FirstOrDefaultAsync(u => u.RefreshToken == tokenModel.RefreshToken);
 
             if (user == null || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
                 return "Invalid credentials";

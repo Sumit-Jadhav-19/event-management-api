@@ -8,8 +8,11 @@ namespace event_mgt_server.Data
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Category> categories { get; set; }
+        public DbSet<UserEvent> userEvents { get; set; }
+        public DbSet<Ticket> tickets { get; set; }
+        public DbSet<Event> events { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
