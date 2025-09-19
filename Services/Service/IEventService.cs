@@ -7,5 +7,8 @@ namespace event_mgt_server.Services.Service
     public interface IEventService 
     {
         Task<APIResponseEntity> GetAllEventsAsync();
+        Task<APIResponseEntity> GetEventById(int EventId);
+        Task<APIResponseEntity> AddEventAsync(EventDTO eventDTO);
+        Task<APIResponseEntity> UpdateEventAsync(int eventId, EventDTO @event);
     }
 }

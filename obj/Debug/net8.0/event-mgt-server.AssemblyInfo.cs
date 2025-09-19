@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("event-mgt-server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24766ebf48310482212f02b75e13ca17ad2d5643")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2cb9fb1e30b264a148f776d62a3ad8e9072f52a")]
 [assembly: System.Reflection.AssemblyProductAttribute("event-mgt-server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("event-mgt-server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
